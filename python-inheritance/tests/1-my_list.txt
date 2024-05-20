@@ -1,0 +1,73 @@
+::
+no arguments:
+::
+
+    >>> MyList = __import__('1-my_list').MyList
+    >>> my_list = MyList()
+    >>> type(my_list)
+    <class '1-my_list.MyList'>
+
+::
+
+    >>> print(my_list)
+    []
+
+::
+one argument
+::
+
+    >>> my_list = MyList([1, 2, 3])
+    >>> print(my_list)
+    [1, 2, 3]
+
+::
+
+    >>> my_list = MyList(None)
+    Traceback (most recent call last):
+    TypeError: 'NoneType' object is not iterable
+
+::
+
+    >>> my_list = MyList()
+    >>> print(my_list.print_sorted)
+    <bound method MyList.print_sorted of []>
+
+The method takes no arguments - a TypeError will be raised if an argument is
+provided.
+
+::
+
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+::
+
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+The order of the original list is not altered after a call to the method.
+
+::
+
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Note that lists of strings are sorted lexographically.
+
+::
+
+::
+
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+If ``print_sorted(...)`` is called on a list of different types, a TypeError
+will be raised.
+
+::

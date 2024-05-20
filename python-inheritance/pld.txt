@@ -1,0 +1,44 @@
+1. **What is a superclass, base class, or parent class**:
+   - A superclass, base class, or parent class is a class from which another class (subclass) inherits attributes and methods.
+   - The subclass can extend or modify the behavior of the superclass.
+
+2. **What is a subclass**:
+   - A subclass is a class that inherits attributes and methods from a superclass.
+   - It can add new attributes or methods and override existing ones.
+
+3. **How to list all attributes and methods of a class or instance**:
+   - You can use the `dir()` function to list all attributes and methods of a class or instance (`dir(ClassOrInstance)`).
+
+4. **When can an instance have new attributes**:
+   - Instances can have new attributes assigned to them at any time after creation.
+   - These new attributes will be specific to that instance and will not affect other instances or the class itself.
+
+5. **How to inherit a class from another**:
+   - Inheritance in Python is achieved by placing the name of the superclass in parentheses after the subclass name.
+   - Example: `class SubclassName(SuperclassName):`.
+
+6. **How to define a class with multiple base classes**:
+   - Multiple inheritance is achieved by listing all base classes in parentheses, separated by commas.
+   - Example: `class SubclassName(BaseClass1, BaseClass2):`.
+
+7. **What is the default class every class inherits from**:
+   - In Python, the default class every class implicitly inherits from is the `object` class.
+   - It provides basic functionality and is the root of the class hierarchy.
+
+8. **How to override a method or attribute inherited from the base class**:
+   - To override a method or attribute, redefine it in the subclass with the same name.
+   - The subclass method or attribute will override the one from the base class.
+
+9. **Which attributes or methods are available by heritage to subclasses**:
+   - Subclasses inherit all attributes and methods from their superclass(es).
+   - This includes public and protected attributes/methods, but not private ones.
+
+10. **What is the purpose of inheritance**:
+    - Inheritance promotes code reuse by allowing subclasses to inherit behavior from superclasses.
+    - It enables hierarchical organization of classes, facilitating easier maintenance and extension of code.
+
+11. **What are, when, and how to use isinstance, issubclass, type, and super built-in functions**:
+    - `isinstance(object, class)`: Checks if an object is an instance of a class or a subclass.
+    - `issubclass(subclass, superclass)`: Checks if a class is a subclass of another class.
+    - `type(object)`: Returns the type of an object.
+    - `super()`: Returns a proxy object that delegates method calls to a parent or sibling class.
