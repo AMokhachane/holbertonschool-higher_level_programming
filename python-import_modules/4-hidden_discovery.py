@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
+
     import hidden_4
-    # interaction in each word of the list
-    for i in dir(hidden_4):
-        if "__" in i:
-            continue
-        else:
-            print(i)
+
+    names = dir(hidden_4)
+    for name in names:
+        if name[:2] != "__":
+            print(name)
