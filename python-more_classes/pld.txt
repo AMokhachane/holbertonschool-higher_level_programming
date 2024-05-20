@@ -1,0 +1,106 @@
+Here are the answers to your questions presented in a list and sub-list format:
+
+1. **Why Python programming is awesome**:
+   - Python is known for its simplicity and readability.
+   - It has a vast standard library and a strong community.
+   - Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming.
+   - It is widely used in various domains such as web development, data science, artificial intelligence, etc.
+
+2. **What is OOP (Object-Oriented Programming)**:
+   - OOP is a programming paradigm based on the concept of "objects."
+   - Objects contain data (attributes) and code (methods).
+   - OOP promotes concepts like encapsulation, inheritance, polymorphism, and abstraction.
+
+3. **“First-class everything”**:
+   - All entities, such as functions, objects, variables, etc., are treated uniformly.
+   - They can be passed as arguments, returned from functions, assigned to variables, etc.
+
+4. **What is a class**:
+   - A class is a blueprint for creating objects.
+   - It defines attributes (data) and methods (functions) that the objects will have.
+
+5. **What is an object and an instance**:
+   - An object is an instance of a class.
+   - It is a concrete realization of the class, with its own unique data.
+
+6. **What is the difference between a class and an object or instance**:
+   - A class is a blueprint or template for creating objects.
+   - An object or instance is a specific realization of that blueprint.
+
+7. **What is an attribute**:
+   - An attribute is a piece of data associated with a particular object.
+   - It can be accessed using dot notation (`object.attribute`).
+
+8. **What are and how to use public, protected, and private attributes**:
+   - Public attributes are accessible from anywhere.
+   - Protected attributes are conventionally indicated by a single underscore (`_`) and are intended for internal use within the class or its subclasses.
+   - Private attributes are conventionally indicated by double underscores (`__`) and are meant to be inaccessible from outside the class.
+
+9. **What is self**:
+   - `self` is a reference to the current instance of a class.
+   - It is used within instance methods to access instance variables and methods.
+
+10. **What is a method**:
+    - A method is a function defined within a class that operates on instances of the class.
+
+11. **What is the special __init__ method and how to use it**:
+    - `__init__` is a special method used for initializing newly created objects.
+    - It is called automatically when a new instance of the class is created.
+
+12. **What is Data Abstraction, Data Encapsulation, and Information Hiding**:
+    - Data Abstraction is the process of hiding the implementation details and showing only the necessary features of an object.
+    - Data Encapsulation is bundling data and methods that operate on that data within a single unit (i.e., the class).
+    - Information Hiding is the principle of restricting access to certain parts of an object, typically achieved through encapsulation.
+
+13. **What is a property**:
+    - A property is a special kind of attribute managed by getter, setter, and deleter methods.
+    - It allows computed attributes to be accessed like normal attributes.
+
+14. **What is the difference between an attribute and a property in Python**:
+    - An attribute is a piece of data associated with an object.
+    - A property is a special kind of attribute managed by getter, setter, and deleter methods.
+
+15. **What is the Pythonic way to write getters and setters in Python**:
+    - Using property decorators to define getter, setter, and deleter methods.
+
+16. **What are the special __str__ and __repr__ methods and how to use them**:
+    - `__str__` is a special method used to return a string representation of an object.
+    - `__repr__` is a special method used to return a string representation of the object that is unambiguous and suitable for debugging.
+
+17. **What is the difference between __str__ and __repr__**:
+    - `__str__` is intended to return a human-readable string representation of the object.
+    - `__repr__` is intended to return a string representation that is unambiguous and suitable for debugging.
+
+18. **What is a class attribute**:
+    - A class attribute is an attribute that is shared by all instances of a class.
+    - It is defined within the class but outside of any method.
+
+19. **What is the difference between an object attribute and a class attribute**:
+    - An object attribute is specific to each instance of a class.
+    - A class attribute is shared by all instances of a class.
+
+20. **What is a class method**:
+    - A class method is a method that is bound to the class itself, rather than to any instance of the class.
+    - It can be called on the class itself or on any instance of the class.
+
+21. **What is a static method**:
+    - A static method is a method that is bound to the class and does not operate on instances of the class.
+    - It does not have access to `self` or `cls` and behaves like a regular function within the class.
+
+22. **How to dynamically create arbitrary new attributes for existing instances of a class**:
+    - By simply assigning a value to a new attribute for a particular instance.
+
+23. **How to bind attributes to object and classes**:
+    - Attributes can be bound to objects by assigning values using dot notation (`object.attribute = value`).
+    - Attributes can be bound to classes by defining them within the class definition.
+
+24. **What is and what does contain __dict__ of a class and of an instance of a class**:
+    - `__dict__` is a dictionary containing the namespace of the class or instance.
+    - It maps attribute names to their values.
+
+25. **How does Python find the attributes of an object or class**:
+    - Python looks for attributes first in the instance's namespace, then in the class's namespace, and finally in the parent classes' namespaces.
+
+26. **How to use the getattr function**:
+    - `getattr(object, attribute_name)` is a built-in function used to get the value of an attribute of an object.
+    - It returns the value of the attribute if it exists, or a default value if specified, or raises an AttributeError if the attribute does not exist.
