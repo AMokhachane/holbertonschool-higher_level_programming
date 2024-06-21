@@ -1,39 +1,36 @@
-import MySQLdb as DB
+#!/usr/bin/python3
+"""
+Lists all states from the database hbtn_0e_0_usa sorted in ascending order by
+states.id
+"""
+import MySQLdb
 import sys
 
 
-db_connect = DB.connect(
-    host='localhost',
-    port=3306,
-    user=sys.argv[1],
-    passwd=sys.argv[2],
-    db=sys.argv[3])
+if __name__ == "__main__":
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    db_name = sys.argv[3]
 
+    try:
+        conn = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=mysql_username,
+            passwd=mysql_password,
+            db=db_name,
+            charset="utf8"
+        )
+    except MySQLdb.Error as e:
+        print("Error connecting to database: {}".format(e))
+        sys.exit(1)
 
-if __name__ == '__main__':
-    db_cursor = db_connect.cursor()
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
 
-    db_cursor.execute("CREATE DATABASE IF NOT EXISTS hbtn_0e_0_usa;")
-    db_cursor.execute("USE hbtn_0e_0_usa;")
-    db_cursor.execute(
-        """CREATE TABLE IF NOT EXISTS states(
-            id INT NOT NULL AUTO_INCREMENT,
-            name VARCHAR(256) NOT NULL,
-            PRIMARY KEY (id)
-        )"""
-    )
-
-    states = ("California", "Arizona", "Texas", "New york", "Nevada")
-
-    for state in states:
-        db_cursor.execute("INSERT INTO states (name) VALUES (%s)", [state])
-
-    db_cursor.execute("SELECT * FROM states ORDER BY id")
-
-    row_sellected = db_cursor.fetchall()
-
-    for row in row_sellected:
+    for row in rows:
         print(row)
 
-    db_connect.commit()
-    db_cursor.close()
+    cur.close()
+    conn.close()
